@@ -1,6 +1,6 @@
 version: '3'
 services:
-  categories_api:
+  categories_api_tests:
     depends_on:
       - pg_db
     build:
@@ -13,7 +13,7 @@ services:
       - DB_HOST=pg_db
       - DB_PORT=5432
       - WAIT_HOSTS=pg_db:5432
-      - ENTRYPOINT_FILE=/app/entrypoint.sh
+      - ENTRYPOINT_FILE=/app/entrypoint-tests.sh
     ports:
       - "8000:8000"
 

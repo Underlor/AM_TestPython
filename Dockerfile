@@ -25,5 +25,6 @@ RUN set -ex \
     && apk del build-deps
 
 COPY . .
+RUN ls -la
 WORKDIR src
-CMD /app/wait && /app/entrypoint.sh
+CMD /app/wait && $ENTRYPOINT_FILE

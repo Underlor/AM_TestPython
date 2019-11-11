@@ -3,3 +3,4 @@ __pycache__
 .idea
 .dockerignore
 Dockerfile
+docker-compose*.yml
