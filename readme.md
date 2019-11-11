@@ -1,5 +1,5 @@
 # Admiral Markets - Python Test Assignment
-##Start with Docker
+## Start with Docker
 Start app with docker-compose:
 
 `docker-compose up`
@@ -8,7 +8,7 @@ Start tests with docker-compose:
 
 `docker-compose -f docker-compose.tests.yml up categories_api_tests`
 
-##For local start:
+## For local start:
 
 Install pipenv if not installed: `pip install pipenv`
 
