@@ -1,0 +1,28 @@
+version: '3'
+services:
+  categories_api:
+    depends_on:
+      - pg_db
+    build:
+      context: .
+    environment:
+      - DJANGO_SETTINGS_MODULE=categories_api.settings
+      - DB_NAME=categories_api
+      - DB_USER=categories_api
+      - DB_PASSWORD=categories_api
+      - DB_HOST=pg_db
+      - DB_PORT=5432
+      - WAIT_HOSTS=pg_db:5432
+    ports:
+      - "8000:8000"
+
+  pg_db:
+    image: postgres:11.4-alpine
+    environment:
+      - POSTGRES_USER=categories_api
+      - POSTGRES_PASSWORD=categories_api
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $POSTGRES_USER"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
