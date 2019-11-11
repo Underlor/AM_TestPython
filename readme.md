@@ -16,7 +16,7 @@ Activate shell: `pipenv shell`
 
 Install libs from Pipfile: `pipenv update`
 
-Start tests: `make tests`
+Start tests: `make test`
 
 Start dev app: `src/manage.py runserver 127.0.0.1:8000`
  
